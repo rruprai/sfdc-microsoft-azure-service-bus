@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Azure_Config__c</members>
+        <members>Azure_Message__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Azure_Config__c</members>
+        <members>Azure_Message__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Azure_Config__c-Azure Config Layout</members>
+        <members>Azure_Message__c-Azure Message Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>37.0</version>
+</Package>
