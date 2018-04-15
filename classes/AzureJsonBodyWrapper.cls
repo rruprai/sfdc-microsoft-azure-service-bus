@@ -6,6 +6,7 @@
  * into a JSON array to send multiple Accounts at once. 
  */ 
 public class AzureJsonBodyWrapper {
+    public String version;
     public String senderId;
     public String receiverId;
     public AzureBody body; 
@@ -13,6 +14,7 @@ public class AzureJsonBodyWrapper {
     public AzureJsonBodyWrapper() {
         senderId = '';
         receiverId = '';
+        version = '1';
         body = new AzureBody(); 
     }//end AzureJsonBodyWrapper
      

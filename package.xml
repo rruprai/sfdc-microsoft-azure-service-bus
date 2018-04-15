@@ -3,6 +3,8 @@
     <types>
         <members>AzureBody</members>
         <members>AzureBrokerProperties</members>
+        <members>AzureDataFactory</members>
+        <members>AzureDataFactoryTest</members>
         <members>AzureGenerateToken</members>
         <members>AzureJsonBodyWrapper</members>
         <members>AzureObjectUtility</members>
