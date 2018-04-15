@@ -12,6 +12,7 @@
         <members>AzureObjectUtilityTest</members>
         <members>AzureReceiver</members>
         <members>AzureReceiverUtility</members>
+        <members>AzureReceiverUtilityTest</members>
         <name>ApexClass</name>
     </types>
     <types>
