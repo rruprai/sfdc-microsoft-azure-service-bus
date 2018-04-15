@@ -6,6 +6,7 @@
         <members>AzureGenerateToken</members>
         <members>AzureJsonBodyWrapper</members>
         <members>AzureObjectUtility</members>
+        <members>AzureObjectUtilityTest</members>
         <members>AzureReceiver</members>
         <members>AzureReceiverUtility</members>
         <name>ApexClass</name>
