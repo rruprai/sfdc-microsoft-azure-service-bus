@@ -6,6 +6,7 @@
         <members>AzureDataFactory</members>
         <members>AzureDataFactoryTest</members>
         <members>AzureGenerateToken</members>
+        <members>AzureGenerateTokenTest</members>
         <members>AzureJsonBodyWrapper</members>
         <members>AzureObjectUtility</members>
         <members>AzureObjectUtilityTest</members>
