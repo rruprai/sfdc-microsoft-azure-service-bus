@@ -6,6 +6,10 @@ This had to be built from scratch so it may not have everything, see the to do s
 
 Azure integration allows for data to be transformed via JSON format so you will have to make your own batch and schedulable classes so that you can schedule as needed.
 
+## [AzureGenerateToken](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
+
+This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "recieve and delete" operations. 
+
 ## Getting Started
 
 * Download the repository and use any CLI tool such as [Ant Migration Tool](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_deploying_ant.htm).
@@ -18,7 +22,7 @@ Azure integration allows for data to be transformed via JSON format so you will 
 * Test classes were added in order to assure code coverage, but you may write your own.
 * I purposely did not include a test mock callout because I do not have access to a live instance so assume you will need to create one according to [Salesforce's example](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_testing_httpcalloutmock.htm)
 * For companies with multiple sandboxes and a production org, I would recommend using [forcedevtool](https://github.com/amtrack/force-dev-tool) to help manage differences between versions. This is an awesome tool that will make continuous integration easy.
-* There are more than one ways to format the JSON so you will be able to modify as needed. I left a couple default in there such as receiverId and senderId.
+* There are more than one ways to format the JSON so you will be able to modify as needed. I left a couple default in there such as receiverId and senderId. 
 
 ## Azure Config object
 
