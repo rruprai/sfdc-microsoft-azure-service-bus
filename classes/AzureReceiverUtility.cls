@@ -83,7 +83,7 @@ public with sharing class AzureReceiverUtility {
                     // We will store the request object name from the body so that we can log what exactly we processed.
                     body += 'Object Name: ' + objectName + '<br>';
                     
-                    completeResponse = AzureReceiver.markCompleteInQueue(completeMethod, endPoint, sasToken, brokerProperties.MessageId, brokerProperties.LockToken, requestTimeOut);
+                    completeResponse = AzureReceiver.receiveAndDeleteFromQueue(completeMethod, endPoint, sasToken, brokerProperties.MessageId, brokerProperties.LockToken, requestTimeOut);
                     // As long we get a succesful complete response we want to create a single message to log activity.
                     if(httpSuccessCodes.contains(completeResponse.getStatusCode())) {
                         azureMsgToCreate = createSingleAzureMsg(responseBody, responseStatusCode, responseStatus);

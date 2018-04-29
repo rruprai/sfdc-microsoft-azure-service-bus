@@ -2,14 +2,17 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>AzureBody</members>
+        <members>AzureBodyTest</members>
         <members>AzureBrokerProperties</members>
         <members>AzureDataFactory</members>
         <members>AzureDataFactoryTest</members>
         <members>AzureGenerateToken</members>
         <members>AzureGenerateTokenTest</members>
         <members>AzureJsonBodyWrapper</members>
+        <members>AzureNoContentCalloutMock</members>
         <members>AzureObjectUtility</members>
         <members>AzureObjectUtilityTest</members>
+        <members>AzureOkCalloutMock</members>
         <members>AzureReceiver</members>
         <members>AzureReceiverUtility</members>
         <members>AzureReceiverUtilityTest</members>
@@ -30,5 +33,5 @@
         <members>Azure_Message__c-Azure Message Layout</members>
         <name>Layout</name>
     </types>
-    <version>37.0</version>
+    <version>42.0</version>
 </Package>

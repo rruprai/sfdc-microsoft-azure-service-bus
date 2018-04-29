@@ -1,11 +1,11 @@
 /*
  * This mainly contains two httpMethods: 
  * peekQueue is a way to receive the first message without deleting from the queue
- * markCompleteInQueue is a way to receive and delete the message from the queue.
+ * receiveAndDeleteFromQueue is a way to receive and delete the message from the queue.
  * Helpful link: https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-performance-improvements
+ * Helpful link: https://docs.microsoft.com/en-us/rest/api/servicebus/unlock-message
  */ 
 public with sharing class AzureReceiver {   
-    //based on the httpMethod, simply receive first message or receive and delete message
     public static HttpResponse peekQueue(String httpMethod, String endPoint, String sasToken, String contentType, String contentLength, Integer timeOut) {
         HttpRequest readRequest = new HttpRequest();
         readRequest.setMethod(httpMethod);
@@ -30,7 +30,7 @@ public with sharing class AzureReceiver {
         return response;
     }//end peekQueue
     
-    public static HttpResponse markCompleteInQueue(String httpMethod, String endPoint, String sasToken, String messageId, String lockToken, Integer timeOut) {
+    public static HttpResponse receiveAndDeleteFromQueue(String httpMethod, String endPoint, String sasToken, String messageId, String lockToken, Integer timeOut) {
         String endPointToUnlockMsg = endPoint.substring(0, endPoint.indexOf('head'));
         endPointToUnlockMsg += messageId;
         endPointToUnlockMsg += '/' + lockToken;
@@ -50,7 +50,7 @@ public with sharing class AzureReceiver {
             response = null;
         }finally {
             // Send admins emails on completion or log activity.
-        }
+        } 
         return response;
     }//end markCompleteInQueue
 }//end AzureReceiver

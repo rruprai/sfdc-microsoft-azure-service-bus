@@ -5,6 +5,11 @@
 public with sharing class AzureBody {
     public String objectName;
     
+    public AzureBody(String name) {
+        // At least have a default value. 
+        objectName = name;
+    }//end AzureBody
+    
     public AzureBody() {
         // At least have a default value. 
         objectName = '';

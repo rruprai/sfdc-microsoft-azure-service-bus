@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -50,6 +46,7 @@
     <description>Stores the configuration for any connections to an Azure Endpoint</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>false</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>false</enableReports>
@@ -72,17 +69,20 @@
         <fullName>Content_Type__c</fullName>
         <externalId>false</externalId>
         <label>Content Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>application/json</fullName>
-                <default>true</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>application/json</fullName>
+                    <default>true</default>
+                    <label>application/json</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Default_Key__c</fullName>
@@ -123,50 +123,60 @@
         <fullName>HTTP_Method__c</fullName>
         <externalId>false</externalId>
         <label>HTTP Method</label>
-        <picklist>
-            <picklistValues>
-                <fullName>GET</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>POST</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>PUT</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GET</fullName>
+                    <default>true</default>
+                    <label>GET</label>
+                </value>
+                <value>
+                    <fullName>POST</fullName>
+                    <default>false</default>
+                    <label>POST</label>
+                </value>
+                <value>
+                    <fullName>PUT</fullName>
+                    <default>false</default>
+                    <label>PUT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Key_Name__c</fullName>
         <description>Also known as the queue name</description>
         <externalId>false</externalId>
         <label>Key Name</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Accounts</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Opportunities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>SalesforceHandler</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accounts</fullName>
+                    <default>true</default>
+                    <label>Accounts</label>
+                </value>
+                <value>
+                    <fullName>Opportunities</fullName>
+                    <default>false</default>
+                    <label>Opportunities</label>
+                </value>
+                <value>
+                    <fullName>SalesforceHandler</fullName>
+                    <default>false</default>
+                    <label>SalesforceHandler</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Key__c</fullName>
@@ -209,29 +219,35 @@
         <fullName>Object_Type__c</fullName>
         <externalId>false</externalId>
         <label>Object Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Opportunity</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Contact</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Lead</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                    <label>Account</label>
+                </value>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                    <label>Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Receiver_Id__c</fullName>
@@ -304,4 +320,5 @@
     <pluralLabel>Azure Configs</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

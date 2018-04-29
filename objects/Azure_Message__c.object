@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -50,6 +46,7 @@
     <description>Used to store Azure messages when receiving</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>false</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -61,61 +58,75 @@
         <fullName>HTTP_Response_Code__c</fullName>
         <externalId>false</externalId>
         <label>HTTP Response Code</label>
-        <picklist>
-            <picklistValues>
-                <fullName>200</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>201</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>204</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>300</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>304</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>400</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>401</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>403</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>404</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>405</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>415</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>500</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>200</fullName>
+                    <default>true</default>
+                    <label>200</label>
+                </value>
+                <value>
+                    <fullName>201</fullName>
+                    <default>false</default>
+                    <label>201</label>
+                </value>
+                <value>
+                    <fullName>204</fullName>
+                    <default>false</default>
+                    <label>204</label>
+                </value>
+                <value>
+                    <fullName>300</fullName>
+                    <default>false</default>
+                    <label>300</label>
+                </value>
+                <value>
+                    <fullName>304</fullName>
+                    <default>false</default>
+                    <label>304</label>
+                </value>
+                <value>
+                    <fullName>400</fullName>
+                    <default>false</default>
+                    <label>400</label>
+                </value>
+                <value>
+                    <fullName>401</fullName>
+                    <default>false</default>
+                    <label>401</label>
+                </value>
+                <value>
+                    <fullName>403</fullName>
+                    <default>false</default>
+                    <label>403</label>
+                </value>
+                <value>
+                    <fullName>404</fullName>
+                    <default>false</default>
+                    <label>404</label>
+                </value>
+                <value>
+                    <fullName>405</fullName>
+                    <default>false</default>
+                    <label>405</label>
+                </value>
+                <value>
+                    <fullName>415</fullName>
+                    <default>false</default>
+                    <label>415</label>
+                </value>
+                <value>
+                    <fullName>500</fullName>
+                    <default>false</default>
+                    <label>500</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>HTTP_Response_Status__c</fullName>
@@ -156,4 +167,5 @@
     <pluralLabel>Azure Messages</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

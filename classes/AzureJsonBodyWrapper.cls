@@ -19,6 +19,6 @@ public class AzureJsonBodyWrapper {
     }//end AzureJsonBodyWrapper
      
     public static AzureJsonBodyWrapper parse(String json) {
-        return (AzureJsonBodyWrapper) System.JSON.deserialize(json, AzureJsonBodyWrapper.class);
+        return (AzureJsonBodyWrapper)System.JSON.deserialize(json, AzureJsonBodyWrapper.class);
     }//end parse
 }//end AzureJsonBodyWrapper

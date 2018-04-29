@@ -38,7 +38,7 @@ public with sharing class AzureDataFactory {
         testConfig.Key_Name__c = 'salesforcequeue';
         testConfig.Key__c = AzureObjectUtility.generateRandomString(20); 
         testConfig.Long_Polling_Timeout__c = 60;
-        testConfig.Max_Callouts__c = 100;
+        testConfig.Max_Callouts__c = 10;
         testConfig.Object_Type__c = 'Account';
         testConfig.Receiver_Id__c = 'testApplication';
         testConfig.Name = testName;
@@ -49,4 +49,48 @@ public with sharing class AzureDataFactory {
             
        	insert testConfig;
     }//end insertTestAzureConfig
+    
+    public static String generateJsonBody(String version, String receiverId, String senderId, List<Account> acntsToProcess) {
+        // Setup JSON Generator
+        JSONGenerator jsonGen = JSON.createGenerator(true);
+        jsonGen.writeStartObject();
+        jsonGen.writeStringField('version', version);
+        jsonGen.writeStringField('receiverId', receiverId);
+        jsonGen.writeStringField('senderId', senderId);
+        
+        // Set some Broker Properties for parsing
+        jsonGen.writeObjectField('BrokerProperties', new AzureBrokerProperties());
+        
+        // add body
+        jsonGen.writeFieldName('body');
+        jsonGen.writeStartObject();
+
+        // This will need to be modified to use your test cases. This is simplified for testing purposes.
+		jsonGen.writeStringField('objectName', 'testaccount');     
+        // Ending curly brace of body.
+        jsonGen.writeEndObject();
+        // End curly brace of message.
+        jsonGen.writeEndobject();
+        return jsonGen.getAsString();
+    }// end generateJsonBody
+    
+    public static String generateBrokerProperties(AzureBrokerProperties brokerProperties) {
+        JSONGenerator jsonProperties = JSON.createGenerator(true);
+        jsonProperties.writeStartObject();
+        jsonProperties.writeStringField('correlationId', brokerProperties.correlationId);
+        jsonProperties.writeStringField('deliveryCount', String.valueOf(brokerProperties.deliveryCount));
+        jsonProperties.writeStringField('enqueuedSequenceNumber', String.valueOf(brokerProperties.enqueuedSequenceNumber));
+        jsonProperties.writeStringField('enqueuedTimeUtc', brokerProperties.enqueuedTimeUtc);
+        jsonProperties.writeStringField('label', brokerProperties.label);
+        jsonProperties.writeStringField('lockToken', brokerProperties.lockToken);
+        jsonProperties.writeStringField('lockedUntilUtc', brokerProperties.lockedUntilUtc);
+        jsonProperties.writeStringField('messageId', brokerProperties.messageId);
+        jsonProperties.writeStringField('partitionKey', brokerProperties.partitionKey);
+        jsonProperties.writeStringField('sequenceNumber', String.valueOf(brokerProperties.sequenceNumber));
+        jsonProperties.writeStringField('sessionId', brokerProperties.sessionId);
+        jsonProperties.writeStringField('state', brokerProperties.state); 
+        jsonProperties.writeStringField('timeToLive', String.valueOf(brokerProperties.timeToLive));
+        jsonProperties.writeEndObject();
+        return jsonProperties.getAsString();
+    }//generateBrokerProperties
 }//AzureDataFactory
