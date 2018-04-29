@@ -8,7 +8,7 @@ Azure integration allows for data to be transformed via JSON format so you will 
 
 ## [AzureGenerateToken](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
 
-This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "recieve and delete" operations. 
+This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "receive and delete" operations.
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ This is the most important class since it is the one that generates the SAS Toke
 * Test classes were added in order to assure code coverage, but you may write your own.
 * I purposely did not include a test mock callout because I do not have access to a live instance so assume you will need to create one according to [Salesforce's example](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_testing_httpcalloutmock.htm)
 * For companies with multiple sandboxes and a production org, I would recommend using [forcedevtool](https://github.com/amtrack/force-dev-tool) to help manage differences between versions. This is an awesome tool that will make continuous integration easy.
-* There are more than one ways to format the JSON so you will be able to modify as needed. I left a couple default in there such as receiverId and senderId. 
+* There are more than one ways to format the JSON so you will be able to modify as needed. I left a couple default in there such as receiverId and senderId.
 
 ## Azure Config object
 
@@ -59,10 +59,13 @@ What things you need to install the software and how to install them
 
 I use [Git](https://git-scm.com/) for versioning.
 
-## Coming soon (TODO)
+## Helpful Links
 
-* Test classes
-* Sample class
+* [Welcome to JSON2Apex](https://json2apex.herokuapp.com/)
+* [Testing Best Practices](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.htm)
+* [Service Bus access control with Shared Access Signatures](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-sas)
+* [Best Practices for performance improvements using Service Bus Messaging](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-performance-improvements)
+* [Unlock Message](https://docs.microsoft.com/en-us/rest/api/servicebus/unlock-message)
 
 ## Authors
 
