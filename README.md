@@ -6,9 +6,9 @@ This had to be built from scratch so it may not have everything, see the to do s
 
 Azure integration allows for data to be transformed via JSON format so you will have to make your own batch and schedulable classes so that you can schedule as needed.
 
-## [AzureGenerateToken](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
+## [AzureGenerateToken](https://github.com/userraj/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
 
-This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "receive and delete" operations.
+This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/userraj/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "receive and delete" operations.
 
 ## Getting Started
 
@@ -67,13 +67,9 @@ I use [Git](https://git-scm.com/) for versioning.
 * [Best Practices for performance improvements using Service Bus Messaging](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-performance-improvements)
 * [Unlock Message](https://docs.microsoft.com/en-us/rest/api/servicebus/unlock-message)
 
-## Authors
-
-* **Raj Ruprai** - *Initial work* - [RajRuprai](https://github.com/rajruprai)
-
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/LICENSE) file for details
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/userraj/sfdc-microsoft-azure-service-bus/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
