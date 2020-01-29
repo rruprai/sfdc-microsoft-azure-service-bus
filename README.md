@@ -6,9 +6,9 @@ This had to be built from scratch so it may not have everything, see the to do s
 
 Azure integration allows for data to be transformed via JSON format so you will have to make your own batch and schedulable classes so that you can schedule as needed.
 
-## [AzureGenerateToken](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
+## [AzureGenerateToken](https://github.com/rruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureGenerateToken.cls)
 
-This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "receive and delete" operations.
+This is the most important class since it is the one that generates the SAS Token that is needed for establishing a connection whether or not you are sending or receiving. The [AzureReceiver](https://github.com/rruprai/sfdc-microsoft-azure-service-bus/blob/master/classes/AzureReceiver.cls) class is just a sample of how you can implement the receive (peekQueue) and the "receive and delete" operations.
 
 ## Getting Started
 
