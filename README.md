@@ -67,14 +67,6 @@ I use [Git](https://git-scm.com/) for versioning.
 * [Best Practices for performance improvements using Service Bus Messaging](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-performance-improvements)
 * [Unlock Message](https://docs.microsoft.com/en-us/rest/api/servicebus/unlock-message)
 
-## Authors
-
-* **Raj Ruprai** - *Initial work* - [RajRuprai](https://github.com/rajruprai)
-
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/rajruprai/sfdc-microsoft-azure-service-bus/blob/master/LICENSE) file for details
-
-## Acknowledgments
-
-* Raj Ruprai
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/userraj/sfdc-microsoft-azure-service-bus/blob/master/LICENSE) file for details
