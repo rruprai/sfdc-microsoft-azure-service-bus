@@ -26,7 +26,9 @@ This is the most important class since it is the one that generates the SAS Toke
 
 ## Azure Config object
 
-This is used to store any customer settings such as keyName, QueueName, endpoint, and many more details. This will allow for easily modifying the connection settings regardless of what environment you are using. Main purpose to store the keys using Encrypted fields and can be enhanced. 
+This is used to store any customer settings such as keyName, QueueName, endpoint, and many more details. This will allow for easily modifying the connection settings regardless of what environment you are using. Main purpose:
+* Store the keys using Encrypted fields
+* Field history tracking to have visibility into who made the changes and when they made them. 
 
 ## Azure Message Object
 
